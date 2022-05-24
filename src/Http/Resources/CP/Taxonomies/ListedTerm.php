@@ -36,7 +36,7 @@ class ListedTerm extends JsonResource
             'private' => $term->private(),
 
             $this->merge($this->values([
-                'title' => $term->title(),
+                'title' => $term->taxonomy()->title() .' - '.  $term->title(),
                 'slug' => $term->slug(),
             ])),
 
